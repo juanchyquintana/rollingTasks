@@ -28,7 +28,7 @@ const agregarTarea = () => {
   nuevaTarea.appendChild(document.createTextNode(tarea));
 
   const botonEliminar = document.createElement("button");
-  botonEliminar.className = "btn btn-danger btn-sm";
+  botonEliminar.className = "btn btn-danger text-uppercase fw-bold";
   botonEliminar.appendChild(document.createTextNode("Eliminar"));
   botonEliminar.addEventListener("click", () => {
     nuevaTarea.remove();
@@ -36,6 +36,6 @@ const agregarTarea = () => {
 
   nuevaTarea.appendChild(botonEliminar);
 
-  document.getElementById("listaTareas").appendChild(nuevaTarea);
-  document.getElementById("tareaInput").value = "";
+  document.querySelector("#listaTareas").appendChild(nuevaTarea);
+  document.querySelector("#tareaInput").value = "";
 };
